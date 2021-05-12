@@ -1,5 +1,4 @@
 import pandas as pd
-from PY/teste.py import *
 
 
 'Com base no Layout US do Teclado Simplificado Dvorak'

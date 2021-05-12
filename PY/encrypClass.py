@@ -1,12 +1,28 @@
-import pandas as pd
+'''
+Script com a classe encryptClass
+'''
 
+# Packages
+import pandas as pd
+import logging
+
+# Encryption functions
 from klang import klang_encrypt
 from caesar_cipher import caeser_cipher_encrypt
+
+# Log config
+LOG_FORMAT = "%(asctime)-24s [%(filename)s:%(lineno)d] \
+    %(levelname)-6s %(message)s"
+logging.basicConfig(filename='PY/logs/logs.log',
+                    filemode='a',
+                    format=LOG_FORMAT,
+                    level=logging.DEBUG)
 
 class encryptClass:
     def __init__(self, msg):
         self.msg = msg
         print(f'Message "{self.msg}" successfully read')
+        logging.info(f'Message "{self.msg}" successfully read')
     
     def print_msg(self):
         print(self.msg)
